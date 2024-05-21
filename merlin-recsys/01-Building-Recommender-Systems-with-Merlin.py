@@ -53,10 +53,11 @@
 # MAGIC %pip install cudf-cu11 dask-cudf-cu11 --extra-index-url=https://pypi.nvidia.com
 # MAGIC %pip install cuml-cu11 --extra-index-url=https://pypi.nvidia.com
 # MAGIC %pip install cugraph-cu11 --extra-index-url=https://pypi.nvidia.com
+# MAGIC dbutils.library.restartPython() 
 
 # COMMAND ----------
 
-# MAGIC %pip install -r ../requirements.txt
+# MAGIC %pip install -r /Workspace/Users/rohit.gopal@databricks.com/ML/RecSys/merlin-on-databricks/requirements.txt
 
 # COMMAND ----------
 
@@ -116,9 +117,13 @@ logging.disable(logging.WARNING)
 
 # COMMAND ----------
 
+# %fs mkdirs /dbfs/rohit.gopal@databricks.com/Merlin/examples/Building-and-deploying-multi-stage-RecSys/
+
+# COMMAND ----------
+
 DATA_FOLDER = os.environ.get("DATA_FOLDER", "/workspace/data/")
 # set up the base dir for feature store
-BASE_DIR = "/dbfs/puneet.jain@databricks.com/Merlin/examples/Building-and-deploying-multi-stage-RecSys/"
+BASE_DIR = "/dbfs/rohit.gopal@databricks.com/Merlin/examples/Building-and-deploying-multi-stage-RecSys/"
 
 # COMMAND ----------
 
